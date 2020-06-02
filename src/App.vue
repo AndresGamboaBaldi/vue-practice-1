@@ -13,17 +13,28 @@
   text-align: center;
   color: #2c3e50;
 }
-
-#nav {
-  padding: 30px;
+table {
+  margin: 0 auto;
+  width: 100%;
+  border: 1px solid black;
 }
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+td {
+  margin: 0 auto;
+  border: 1px solid black;
 }
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+th {
+  background-color: seashell;
+  height: 50px;
+}
+span {
+  font-size: 71px;
+  color: gold;
+}
+label {
+  font-size: 30px;
+  color: navy;
+}
+tr:nth-child(even) {
+  background-color: #f2f2f2;
 }
 </style>

@@ -2,6 +2,7 @@
   <div>
     <span>Inventario Bibliotecario</span>
     <br />
+    <label> Seleccione una Categoria: </label>
     <select v-model="selectedCategory">
       <option>Books</option>
       <option>Magazines</option>
@@ -9,16 +10,25 @@
       <option>Others</option>
       <option>All</option>
     </select>
-    <br />
-    <input v-model="selectedName" placeholder="Escriba el nombre" />
-    <br />
-    <div :key="item.code" v-for="item in filteredList">
-      <span>{{ item.code }}</span>
-      <span>{{ item.name }}</span>
-      <span>{{ item.description }}</span>
-      <span>{{ item.category }}</span>
-      <br />
-    </div>
+    <input v-model="selectedName" placeholder="Escriba el nombre a buscar" />
+    <table id="table" style="table">
+      <thead>
+        <tr>
+          <th>Code</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Category</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr :key="item.code" v-for="item in filteredList">
+          <td>{{ item.code }}</td>
+          <td>{{ item.name }}</td>
+          <td>{{ item.description }}</td>
+          <td>{{ item.category }}</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </template>
 
